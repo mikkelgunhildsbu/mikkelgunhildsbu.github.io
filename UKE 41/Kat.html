@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title> Sykklen</title>
+    <style>
+
+        @keyframes catwalk {
+            to{
+                background-position: 0 -2280px;
+            }
+        }
+        @keyframes moveRight {
+            to{
+                transform: translateX(800px);
+            }
+
+        }
+        .sykkel{
+            background-image: url(sykkel/Sykkel.png);
+            animation: catwalk steps(12) 2s infinite;
+
+            animation-name: catwalk, moveRight;
+            animation-timing-function: steps(12);
+            animation-duration: 1s 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="sykkel"></div>
+
+
+</body>
+</html>

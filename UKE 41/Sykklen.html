@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        /*
+        body{
+            background-image: url("sykkel/e6f5541cd5b14a8c8c4a6ef0110e730c02e1ff86.gif");
+            background-size: cover, 800px
+            background-position: bottom center;
+        }
+*/
+        @keyframes Bike {
+            from{
+
+            }
+
+            to{
+                background-position: -6000px 0px;
+            }
+        }
+        @keyframes moveRight {
+            to{
+                transform: translateX(6000px);
+            }
+        }
+        #sykkel{
+            background-image: url("sykkel/menihelveteda.png");
+            height: 500px;
+            width: 500px;
+            margin-left:0px;
+            margin-top: 200px;
+
+            animation-name: Bike, moveRight;
+            animation-timing-function: steps(12), steps(48);
+            animation-duration: 1s, 6s;
+            animation-iteration-count: infinite;
+
+
+        }
+    </style>
+</head>
+<body>
+
+<div id = "sykkel"> </div>
+
+</body>
+</html>
