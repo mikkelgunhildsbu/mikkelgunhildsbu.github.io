@@ -1,0 +1,62 @@
+header{
+    padding: 50px;
+    background-color: darkred;
+}
+
+.subheader>a{
+    padding-right:40px;
+    font-style: bold;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+#header2{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color:wheat;
+    -webkit-text-stroke-width: 0.4px;
+    border-bottom: solid 1px #761F18;
+
+}
+#login{
+    float: right;
+}
+#PIZZA {
+    margin-top: 10%;
+}
+#toppings{
+    margin-top: 6%;
+}
+#logo{
+    position: absolute;
+    top:2.5%;
+    left: 46%;}
+
+header>nav>a:hover{
+    transform: scale(1.05);
+}
+
+
+@media(max-width: 1024px){
+    header {
+        text-align: left;
+    }
+        #logo{
+            position: absolute;
+
+    }
+}
+@media(max-width: 640px){
+    #logo{
+        position: absolute;
+        top:2.5%;
+        left: 75%;
+    }
+    #login{
+        float: left;
+        margin-left: 0px;
+
+    }
+
+}

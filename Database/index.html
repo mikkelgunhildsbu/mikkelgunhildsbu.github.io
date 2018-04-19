@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Levering</title>
+    <link rel="stylesheet" href="css/my-slider.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body{
+            margin: 0px;
+            background-color: lightyellow;
+            font-family: SansSerif;
+        }
+
+        /*main*/
+        .banterfantahele{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 76px;
+            margin-top: 20px;
+
+        }
+
+        .banterfanta{
+            border: solid 1px white;
+            width: 88.5%;
+            height: 100%;
+
+        }
+
+        #bantafanta1{
+            background-color: wheat;
+           margin-left: 11.5%;
+        }
+
+        #bantafanta1>a>img{
+            float: left;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        #bantafanta1:hover{
+            background-color: yellow;
+        }
+
+        #bantafanta2{
+            background-color: wheat;
+            margin-left: 0%;
+
+        }
+
+        #bantafanta2>a>img{
+            float: left;
+            margin-top: 15px;
+            margin-left: 5px;
+        }
+
+        #bantafanta2:hover{
+            background-color: yellow;
+        }
+
+        #nærdeg {
+            text-align: center;
+
+        }
+
+        .search_input{
+            width: 80%;
+            height: 70px;
+            background: #ffffff;
+            border: solid 3px #761F18;
+            text-align: center;
+            padding: 0 20px;
+            margin-top:15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .search_button{
+            width: 50%;
+            height: 50px;
+            margin-top: 10px;
+            background: #761F18;
+            color: yellow;
+            font-weight: 500;
+            letter-spacing: 0;
+            border:3px solid #761F18;
+            font-size: 18px;
+        }
+
+
+
+
+
+
+
+        /*media*/
+
+        @media(max-width: 1024px){
+
+
+
+        }
+
+        @media(max-width: 640px){
+
+            .banterfantahele{
+                grid-template-columns: repeat(1,1fr);
+                text-align: center;
+            }
+            #bantafanta1,#bantafanta2{
+                text-align: center;
+                margin-left: 5.4%;
+            }
+
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="subheader">
+            <a  href="omOss.html">Om Oss</a>
+            <a  href="Bestill.html">Bestill</a>
+            <a  href="gavekort.html">Gavekort</a>
+            <a  href="index.html">
+                    <img  id="logo" src=BILDER/Miguels%20posto%20logo.png width="106" height="128" >
+                </a>
+            <a id="login" href="index.html">Hjem</a>
+        </nav>
+
+
+
+    </header>
+    <header id="header2">
+    RING OG BESTILL <br>22445599
+    </header>
+
+    <main>
+
+
+        <section>
+            <div class="ism-slider" id="my-slider">
+                <ol>
+                    <li>
+                        <a href="Bestill.html">
+                        <img id="PIZZA" src=BILDER/PIZZA.jpg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Bestill.html">
+                        <img id="toppings" src="BILDER/12345678.jpg" height="">
+                        </a>
+                    </li>
+                    <li>
+
+
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <div class="banterfantahele">
+
+            <div class="banterfanta" id="bantafanta1">
+                <a href="">
+                    <img src="BILDER/KJØP3.png"  width="99%" height="95%">
+                </a>
+            </div>
+            <div class="banterfanta" id="bantafanta2">
+                <a href="">
+                    <img src="BILDER/FOTBALLDEAL.png"  width="99%" height="95%">
+                </a>
+            </div>
+
+
+        </div>
+
+        <div id="nærdeg">
+
+            <form action="url"> </form>
+            <input type="text" class="search_input" autocomplete="off" id="psSearch" placeholder="Søk etter Miguels Posto nær deg" align="middle">
+            <a href="prank.html"><button class="search_button" type="submit">søk</button></a>
+
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div id="omoss2">
+            <div>
+                <img src="BILDER/dibs.png" alt="">
+            </div>
+
+            <div>
+                <h4>Miguels Posto</h4>
+                <nav>
+                    <ul>
+                        <a class="footernav" href="">Franchise</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Jobbe hos Miguels Posto</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Kontaktinfo hovedkontor</a>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h4>Hold meg oppdatert</h4>
+                <p class="footerp" >Vil du ikke gå glipp av gode tilbud eller smakfulle nyheter?. Meld deg på vårt nyhetsbrev!</p>
+
+                    <form id="skjema">
+
+                        <div>
+                            <input type="email" id="inpEpost" placeholder="Epost" required>
+                        </div>
+
+                        <button type="submit" class="button"> Meld På</button>
+                    </form>
+
+
+
+            </div>
+            <div>
+                <nav>
+                    <h4>
+                        Kundeservice
+                    </h4>
+                    <ul>
+                        <a class="footernav" href="">Kjøpebetingelser</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Personvern</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Ernæringstabell</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Allergentabell</a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_sosiale_medier">
+                <h4>Sosiale Medier</h4>
+                <span>
+            <a href="">
+            <img src="BILDER/facebook_icon_round.png" class="transfromToSquareFacebook" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/icon_instagram_round.png" class="transfromToSquareInstagram" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/snapchat_icon_round.png" class="transfromToSquareSnapchat" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/twitter_icon_round.png" class="transfromToSquareTwitter" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/youtube_icon_round.png" class="transfromToSquareYoutube" height="37" width="37">
+            </a>
+            </span>
+
+                <div>
+                    <p id="hastagp">
+                        <br>
+                        #MiguelsPosto
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </footer>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA07RfST5XC6c-UpzDRqxwtRgMrwgXcVsg",
+            authDomain: "it01-75763.firebaseapp.com",
+            databaseURL: "https://it01-75763.firebaseio.com",
+            projectId: "it01-75763",
+            storageBucket: "it01-75763.appspot.com",
+            messagingSenderId: "217889174479"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const db = firebase.database();
+        const kontakter = db.ref("kontakter");
+
+        const skjema = document.getElementById("skjema");
+        //const inpNavn = document.getElementById("inpNavn");
+        const inpEpost = document.getElementById("inpEpost");
+        //const inpTelefon = document.getElementById("inpTelefon");
+
+
+        function registrerKontakt(evt) {
+            evt.preventDefault();
+            const kontakt = {
+
+                epost:inpEpost.value
+
+            };
+            kontakter.push(kontakt);
+            skjema.reset();
+
+        }
+
+
+        skjema.onsubmit = registrerKontakt;
+
+    </script>
+
+    <script src="js/ism-2.2.min.js"></script>
+
+
+
+
+
+</body>
+</html>

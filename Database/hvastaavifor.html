@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miguels Posto</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0px;
+            background-color: lightyellow;
+
+        }
+
+
+        #omoss{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-gap: 10px;
+
+            padding: 10px;
+
+        }
+
+        .pls{
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start:1;
+            grid-row-end: 4;
+            border: solid 2px wheat;
+            background-color: lightyellow;
+
+        }
+
+        .omossnav{
+            text-decoration:;
+            color: black;
+
+        }
+        .omossnav:hover{
+            font-size: 130%;
+        }
+
+        .info{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start:1;
+            grid-row-end: 4;
+            background-color: lightyellow;
+        }
+
+        h1{
+            margin-left: 40px;
+        }
+
+        .p_omOss{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            line-height: 1.4em;
+            color: #000000;
+            margin-bottom: 15px;
+            width: 350px;
+            float: left;
+            clear: left;
+            margin-left: 40px;
+        }
+
+
+        @media(max-width: 1024px){
+
+        }
+
+        @media(max-width: 640px){
+            .pls{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                border: solid 2px wheat;
+                background-color: lightyellow;
+
+            }
+            .info{
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start:2;
+                grid-row-end: 5;
+                background-color: lightyellow;
+            }
+            ul{
+                display: block;
+            }
+            .p_omOss, h1{
+                margin-left: 5px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="subheader">
+        <a href="omOss.html">Om Oss</a>
+        <a href="Bestill.html">Bestill</a>
+        <a href="gavekort.html">Gavekort</a>
+        <a href="index.html">
+            <img  id="logo" src=BILDER/Miguels%20posto%20logo.png width="106" height="128" >
+        </a>
+        <a id="login" href="logIn.html">Log in</a>
+    </nav>
+</header>
+<header id="header2">
+    RING OG BESTILL <br>22445599
+</header>
+
+<main>
+    <div id="omoss">
+        <div class="pls">
+            <nav>
+                <ul>
+                    <h2>OM OSS</h2>
+                </ul>
+                <ul>
+                    <a class="omossnav" href="omOss.html">HISTORIE</a>
+                </ul>
+                <ul>
+                    <a class="omossnav" href="hvastaavifor.html">HVA STÅR VI FOR</a>
+                </ul>
+                <ul>
+                    <a class="omossnav" href="KONTAKTOSS.html">KONTAKT OSS</a>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="info">
+            <h1>Miguel Posto - hva står vi for?</h1>
+            <p class="p_omOss">
+                Vi setter høye krav til oss. Våre kunder skal oppleve oss som dyktige og innovative på det vi holder på med. Våre kunder er midtpunktet i alt det vi holder på med.
+            </p>
+            <p class="p_omOss">
+                Våre medarbeidere skal trives på jobben, både sammen med kollegaer og kunder. Vi skal legge forholdene til rette for individuell utvikling og skape pågangsmot. Vi skal gi like muligheter til alle uavhengig av hvem vi er eller hvordan vi ser ut.
+            </p>
+            <p class="p_omOss">
+                Vi skal engasjere oss med det som foregår i våre nære omgivelser. Vi skal støtte lokale idrettslag og foreninger. Vi skal heie på lokale helter. Vårt lokale engasjement skal være genuint og ekte.
+            </p>
+            <p class="p_omOss">
+                Vi skal tilstrebe oss å ta vare på våre omgivelser. I de leverandører og løninger vi velger skal vi gjøre vårt ytterste for at handelen skal foregår på en etisk forsvarlig måte.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+<footer>
+    <div id="omoss2">
+        <div>
+            <img src="BILDER/dibs.png" alt="">
+        </div>
+
+        <div>
+            <h4>Miguels Posto</h4>
+            <nav>
+                <ul>
+                    <a class="footernav" href="">Franchise</a>
+                </ul>
+                <ul>
+                    <a class="footernav" href="">Jobbe hos Miguels Posto</a>
+                </ul>
+                <ul>
+                    <a class="footernav" href="">Kontaktinfo hovedkontor</a>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h4>Hold meg oppdatert</h4>
+            <p class="footerp" >Vil du ikke gå glipp av gode tilbud eller smakfulle nyheter?. Meld deg på vårt nyhetsbrev!</p>
+
+            <form id="skjema">
+                <div>
+                    <input type="text" id="inpNavn" placeholder="navn" required>
+                </div>
+                <div>
+                    <input type="email" id="inpEpost" placeholder="Epost" required>
+                </div>
+                <div>
+                    <input type="tel" id="inpTelefon" placeholder="Telefon #" required>
+                </div>
+
+                <button type="submit" class="button"> Meld På</button>
+            </form>
+
+
+
+        </div>
+        <div>
+            <nav>
+                <h4>
+                    Kundeservice
+                </h4>
+                <ul>
+                    <a class="footernav" href="">Kjøpebetingelser</a>
+                </ul>
+                <ul>
+                    <a class="footernav" href="">Personvern</a>
+                </ul>
+                <ul>
+                    <a class="footernav" href="">Ernæringstabell</a>
+                </ul>
+                <ul>
+                    <a class="footernav" href="">Allergentabell</a>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer_sosiale_medier">
+            <h4>Sosiale Medier</h4>
+            <span>
+            <a href="">
+            <img src="BILDER/facebook_icon_round.png" class="transfromToSquareFacebook" height="37" width="37">
+            </a>
+            </span>
+
+            <span>
+            <a href="">
+            <img src="BILDER/icon_instagram_round.png" class="transfromToSquareInstagram" height="37" width="37">
+            </a>
+            </span>
+
+            <span>
+            <a href="">
+            <img src="BILDER/snapchat_icon_round.png" class="transfromToSquareSnapchat" height="37" width="37">
+            </a>
+            </span>
+
+            <span>
+            <a href="">
+            <img src="BILDER/twitter_icon_round.png" class="transfromToSquareTwitter" height="37" width="37">
+            </a>
+            </span>
+
+            <span>
+            <a href="">
+            <img src="BILDER/youtube_icon_round.png" class="transfromToSquareYoutube" height="37" width="37">
+            </a>
+            </span>
+
+            <div>
+                <p id="hastagp">
+                    <br>
+                    #MiguelsPosto
+                </p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</footer>
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA07RfST5XC6c-UpzDRqxwtRgMrwgXcVsg",
+        authDomain: "it01-75763.firebaseapp.com",
+        databaseURL: "https://it01-75763.firebaseio.com",
+        projectId: "it01-75763",
+        storageBucket: "it01-75763.appspot.com",
+        messagingSenderId: "217889174479"
+    };
+    firebase.initializeApp(config);
+</script>
+
+<script>
+    const db = firebase.database();
+    const kontakter = db.ref("kontakter");
+
+    const skjema = document.getElementById("skjema");
+    const inpNavn = document.getElementById("inpNavn");
+    const inpEpost = document.getElementById("inpEpost");
+    const inpTelefon = document.getElementById("inpTelefon");
+
+
+    function registrerKontakt(evt) {
+        evt.preventDefault();
+        const kontakt = {
+            navn:inpNavn.value,
+            epost:inpEpost.value,
+            telefon:inpTelefon.value
+        };
+        kontakter.push(kontakt);
+        skjema.reset();
+        inpNavn.focus();
+    }
+
+    kontakter.on("child_added", visKontakt);
+    skjema.onsubmit = registrerKontakt;
+
+</script>
+
+
+</body>
+</html>

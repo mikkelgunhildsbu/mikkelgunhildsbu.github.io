@@ -1,0 +1,154 @@
+{
+  "pizzaer": {
+    "SkapDinEgen": {
+      "navn": "SKAP DIN EGEN",
+      "toppings": [
+        "Alle pizzaer har Pizzasaus",
+        " og 100% mozerallaost"
+      ],
+      "spicy": false,
+      "vegetar": true,
+      "new": false,
+      "img": "JSONBILDER/skapDinEgen.png",
+      "link":"skapDinEgen.html",
+      "pris": "175"
+    },
+    "margerita": {
+      "navn": "MARGERITA",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost"
+      ],
+      "spicy": false,
+      "vegetar": true,
+      "new": false,
+      "img": "JSONBILDER/Margerita.png",
+      "link":"margerita.html",
+      "pris": "125"
+    },
+    "pepperoni": {
+      "navn": "PEPPERONI",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "pepperoni"
+      ],
+      "spicy": false,
+      "vegetar": false,
+      "new": false,
+      "img": "JSONBILDER/Pepperoni.png",
+      "link":"pepperoni.html",
+      "pris": "155"
+
+
+    },
+    "veggiesupreme": {
+      "navn": "VEGGIE SUPREME",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "løk",
+        "grønn paprika",
+        "tomat",
+        "mais",
+        "sopp"
+      ],
+      "spicy": false,
+      "vegetar": true,
+      "new": false,
+      "img": "JSONBILDER/VeggieSupreme.png",
+      "link":"veggiesupreme.html",
+      "pris": "164"
+    },
+    "peppersvenn": {
+      "navn": "PEPPERSVENN",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "pepperebiff",
+        "løk",
+        "sjampingjong"
+      ],
+      "spicy": false,
+      "vegetar": false,
+      "new": true,
+      "img": "JSONBILDER/Peppersvenn.png",
+      "link":"peppersvenn.html",
+      "pris": "138"
+    },
+    "hawaii": {
+      "navn": "HAWAII",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "ananas",
+        "skinke",
+        "sjampingjong"
+      ],
+      "spicy": false,
+      "vegetar": false,
+      "new": false,
+      "img": "JSONBILDER/Hawaii.png",
+      "link":"hawaii.html",
+      "pris": "137"
+
+
+    },
+    "spicychicken": {
+      "navn": "SPICY CHICKEN",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "marinert kylling",
+        "grønn paprika",
+        "jalapeno",
+        "chilliflak"
+      ],
+      "spicy": true,
+      "vegetar": false,
+      "new": false,
+      "img": "JSONBILDER/SpicyChicken.png",
+      "link":"spicychicken.html",
+      "pris": "195"
+
+    },
+    "tacokylling": {
+      "navn": "TACOKYLLING",
+      "toppings": [
+        "pizzasaus",
+        "100% marinertkylling",
+        "tacosaus",
+        "løk"
+      ],
+      "spicy": 1 ,
+      "vegetar": false,
+      "new": true,
+      "img": "JSONBILDER/Tacokylling.png",
+      "link":"tacokylling.html",
+      "pris": "180"
+
+    },
+    "americancheesesteak": {
+      "navn": "AMERICAN CHEESE ",
+      "toppings": [
+        "pizzasaus",
+        "100% mozerellaost",
+        "cheddar ost",
+        "løk",
+        "biff",
+        "grønn paprika",
+        "sopp"
+      ],
+      "spicy": false,
+      "vegetar": false,
+      "new": true,
+      "img": "JSONBILDER/AmericanCheeseSteak.png",
+      "link":"americancheese.html",
+      "pris": "169"
+
+
+    }
+  }
+
+
+}
