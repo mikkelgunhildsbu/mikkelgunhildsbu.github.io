@@ -83,11 +83,10 @@
     <nav class="subheader">
         <a  href="omOss.html">Om Oss</a>
         <a  href="Bestill.html">Bestill</a>
-        <a  href="gavekort.html">Gavekort</a>
         <a  href="index.html">
             <img  id="logo" src=BILDER/Miguels%20posto%20logo.png width="106" height="128" >
         </a>
-        <a id="login" href="logIn.html">Log in</a>
+        <a id="login" href="cart.html">Handlekurv</a>
     </nav>
 
 
@@ -96,7 +95,6 @@
 <header id="header2">
     RING OG BESTILL <br>22445599
 </header>
-
 <main>
 
     <h2 id="bestillingsmåte">BESTILL</h2>
@@ -121,7 +119,7 @@
             </div>
 
             <a href="takkforbestilling.html">
-            <button type="submit" class="buttonbestilling" onclick="window.location.href='takkforbestilling.html'">
+            <button type="submit" class="buttonbestilling" onclick="registrerBestilling(evt)">
                 Bestill
             </button>
             </a>
@@ -259,6 +257,7 @@
 <script>
     const db = firebase.database();
     const pepperoni = db.ref("pepperoni");
+    const bestilling = db.ref("bestilling");
 
     const pepperonibestilling = document.getElementById("pepperonibestilling");
     const inpNavn = document.getElementById("inpNavn");
@@ -277,13 +276,18 @@
             adresse:inpAdresse.value
 
         };
+        bestilling.push(id);
         pepperoni.push(pepperonipizza);
-        pepperonibestilling.reset();
+
+
+
 
     }
 
 
     pepperonibestilling.onsubmit = registrerBestilling;
+
+
 
 </script>
 

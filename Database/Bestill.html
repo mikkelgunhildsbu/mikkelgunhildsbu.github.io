@@ -11,9 +11,6 @@
             margin: 0px;
             background-color: lightyellow;
         }
-
-
-
         #allePizzaer{
             width: 70%;
             height: 100%;
@@ -22,34 +19,31 @@
             margin-left: 15.2%;
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            grid-gap: 7px;
+            grid-gap: 1%;
         }
         #bestillingsmåte{
             margin-bottom: 0;
             padding-bottom: 10px;
             padding-top: 10px;
             background-color: wheat;
-            width: 1008px;
+            width: 70%;
             text-align: center;
             margin-left: 15.2%;
             border: solid 2px antiquewhite;
-
-
-
         }
-
         h3{
             text-decoration: none;
             text-align: center;
             color: darkred;
             text-underline: none;
         }
+        #allePizzaer>article{
+            background-color: lightyellow;
+            margin: 2%;
+            font-family: SansSerif;
+            width: 95%;
 
-       #allePizzaer>article{
-           background-color: lightyellow;
-           margin: 7px;
-           font-family: SansSerif;
-       }
+        }
         #allePizzaer>article>h2{
             text-align: center;
             color: darkred;
@@ -61,7 +55,6 @@
             text-align: center;
             color: darkred;
             font-family: "SansSerif";
-
         }
         .velgButton{
             background: #761f18;
@@ -71,19 +64,26 @@
             font-size: 16px;
             border: none;
             width: 100%;
-
-
         }
         .velgButton:hover{
             background-color: #a0281c;
         }
 
+        @media(max-width: 1024px){
+            #allePizzaer{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+            }
 
+        }
 
+        @media(max-width: 640px){
+            #allePizzaer{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+            }
 
-
-
-
+        }
     </style>
 </head>
 <body>
@@ -113,7 +113,17 @@
 
 
 
-    <section id="allePizzaer"></section>
+    <section id="allePizzaer">
+        <article>
+            <h2>SKAP DIN EGEN</h2>
+            <img src="JSONBILDER/skapDinEgen.png">
+            <h4> Alle pizzaer har pizzasaus og 100% mozerallaost</h4>
+            <h3>175-,</h3>
+            <a href="skapDinEgen.html">
+            <button class="velgButton">Kjøp</button>
+            </a>
+        </article>
+    </section>
 
 
 
@@ -236,8 +246,6 @@
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
 <script>
-
-
 </script>
 <script>
     // Initialize Firebase
@@ -255,102 +263,55 @@
 <script>
     const db = firebase.database();
     const kontakter = db.ref("kontakter");
-
     const skjema = document.getElementById("skjema");
     //const inpNavn = document.getElementById("inpNavn");
     const inpEpost = document.getElementById("inpEpost");
     //const inpTelefon = document.getElementById("inpTelefon");
-
-
     function registrerKontakt(evt) {
         evt.preventDefault();
         const kontakt = {
-
             epost:inpEpost.value
-
         };
         kontakter.push(kontakt);
         skjema.reset();
-
     }
-
-
     skjema.onsubmit = registrerKontakt;
-
-
-
-
-
-
-
     //PIZZA
-
-
-
-
     //HTML-elementer
     const allePizzaer = document.getElementById("allePizzaer");
-
     // Firebase-kontakt
     const pizzaer = db.ref("pizzaer");
-
-
-
-
     function visPizza(pizzaData) {
         //Primærnøkkel
         const key = pizzaData.key;
         const pizzaer = pizzaData.val();
-
         let article = `
-                <article id="pizzabestilling">
+                <article >
                 <h2>${pizzaer.navn}</h2>
-
                  <img src="${pizzaer.img}">
                 <h4>${pizzaer.toppings}</h4>
                 <h3>${pizzaer.pris} -,</h3>
-
             <button type="submit" class="velgButton" onclick="buy('${key}')"> Kjøp</button>
-
-
                 </article>
             `;
-
         allePizzaer.innerHTML += article;
-
     }
-
     pizzaer
         .orderByChild("pizzaer")
         .on("child_added", visPizza);
-
-
     const pizzabestilling = document.getElementById("pizzabestilling");
     const bestilling = db.ref("bestilling");
     const navn = db.ref("navn");
-    
-
     function buy(id) {
-
-
-        bestilling.push(id)
-
-
-
-
-
+        bestilling.push(id);
+        alert("Lagt til i handlekurv!");
     }
-    pizzabestilling.onsubmit =buy(id);
-
-
-
+    //pizzabestilling.onsubmit = buy(id);
 </script>
 
 <script>
-
 </script>
 
 
 
 </body>
-</html>

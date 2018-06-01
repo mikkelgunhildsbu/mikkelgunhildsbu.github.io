@@ -3,8 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <title>Miguels Posto</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+
+    body{
+        margin: 0px;
+        background-color: lightyellow;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #allePizzaer{
+        width: 70%;
+        height: 100%;
+        background-color: wheat;
+        border: solid 2px antiquewhite;
+        margin-left: 15.2%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 1%;
+        color: darkred;
+    }
+    #allePizzaer1{
+        width: 70%;
+        height: 100%;
+        background-color: antiquewhite;
+        border: solid 2px wheat;
+        margin-left: 15.2%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 1%;
+        color: darkred;
+    }
+    #bestillingsmåte{
+        margin-bottom: 0;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: wheat;
+        width: 70%;
+        text-align: center;
+        margin-left: 15.2%;
+        border: solid 2px antiquewhite;
+        color: darkred;
+    }
+    .skapTitel{
+        margin-left: 15%;
+        text-decoration: underline;
+    }
+    li{
+        list-style-type: none;
+        margin-bottom: 10px;
+
+    }
+
+    .pizzaSize {
+        height: 44px;
+        font-size: 17px;
+        color: #555555;
+        border: 1px solid #f2f4f5;
+        box-shadow: none;
+        margin: 0px 10px 10px 10px;
+    }
+    #sizeh4{
+        color: darkred;
+        padding: 1px;
+        margin-top: 5%;
+        text-align: left;
+        margin-left: 5%;
+
+    }
+    #pizza-pan{
+        width: 80%;
+    }
+
+    .product-total-price {
+        margin-top: 5px;
+        font-size: 26px;
+        line-height: 48px;
+    }
+
+
+
+    @media(max-width: 1024px){
+        #allePizzaer{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+
+    }
+
+    @media(max-width: 640px){
+        #allePizzaer{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        label{
+            text-align: center;
+        }
+
+    }
+
+
+
+
+</style>
 <body>
+
+    <header>
+    <nav class="subheader">
+        <a  href="omOss.html">Om Oss</a>
+        <a  href="Bestill.html">Bestill</a>
+        <a  href="index.html">
+            <img  id="logo" src=BILDER/Miguels%20posto%20logo.png width="106" height="128" >
+        </a>
+        <a id="login" href="cart.html">Handlekurv</a>
+    </nav>
+
+
+
+</header>
+    <header id="header2">
+    RING OG BESTILL <br>22445599
+    </header>
+
+ <main>
+
+         <h2 id="bestillingsmåte">SKAP DIN EGEN</h2>
+     <section id="allePizzaer">
+
+         <span>
+             <label for="pizza-size"><h4 id="sizeh4">VELG STØRRELSE</h4></label>
+             <div class="select-wrapper">
+                 <select id="pizza-size" class="pizzaSize" name="size_id">
+                     <option class="Sizes" rel="Small_22">
+                         Liten 22cm *Gluten Free                                            (4 Stykker)
+                     </option>
+                     <option class="Sizes" rel="Small_20">
+                         Liten 20cm                                            (4 Stykker)
+                     </option>
+                     <option class="Sizes" rel="Medium_28">
+                         Medium 28cm                                            (6 Stykker)
+                     </option>
+                     <option class="Sizes" rel="Large_36">
+                         Stor 36cm                                            (8 Stykker)
+                     </option>
+                     <option class="Sizes" rel="Family_40">
+                         Family 40cm                                            (10 Stykker)
+                     </option>
+                 </select>
+
+             </div>
+         </span>
+
+         <span>
+
+               <label for="pizza-size"><h4 id="sizeh4">VELG BUNN</h4></label>
+             <div class="select-wrapper">
+               <select id="pizza-pan" class="pizzaSize" name="pan_size_id">
+                   <option disabled="disabled" style="display:none" rel="Gluten_free" lang="8616" price="79.00" tp="15.00" ps_id="2">Gluten Free</option>
+                   <option rel="American" lang="8869" price="119.00" tp="30.00" ps_id="18">Amerikansk</option>
+                   <option rel="Italian" lang="8870" price="119.00" tp="30.00" ps_id="19">Italiensk</option>
+                   <option disabled="disabled" style="display:none" rel="Pizza_Pan" lang="8847" price="128.00" tp="25.00" ps_id="17">Pan Pizza</option>
+               </select>
+
+             </div>
+
+         </span>
+
+         <span>
+             <p style="font-weight: 700">
+                 PRIS
+                 <br>
+                 <div class="product-total-price font-bold blue-txt">
+             <article id="PRIS">  </article>
+             <button class="button" onclick="buy(id)">Kjøp</button>
+                </div>
+             </p>
+
+         </span>
+
+     </section>
+
+     <section id="allePizzaer1">
+         <div>
+
+             <h2 class="skapTitel">Dip</h2>
+            <ul>
+                <li class="liste">
+             <input type="checkbox"  tname="BBQ saus">
+             <label>BBQ saus</label>
+                </li>
+
+                <li class="liste">
+             <input type="checkbox"  tname="Taco saus">
+             <label>Taco saus</label>
+                </li>
+
+                <li class="liste">
+             <input type="checkbox"  tname="Pizzasaus">
+             <label>Pizzasaus</label>
+                </li>
+             </ul>
+
+             <h2 class="skapTitel">Ost</h2>
+
+
+             <ul>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Cheddar ost">
+                     <label>Cheddar ost</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Mozzerellaost">
+                     <label>Mozzerellaost</label>
+                 </li>
+             </ul>
+
+
+
+
+
+         </div>
+         <div>
+             <h2 class="skapTitel">Kjøtt</h2>
+
+             <ul>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Bacon">
+                     <label>Bacon</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Pepperoni">
+                     <label>Pepperoni</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Tacokjøtt">
+                     <label>Tacokjøtt</label>
+                 </li>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Marinert Biffkjøt">
+                     <label>Marinert Biffkjøt</label>
+                 </li>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Skinke">
+                     <label>Skinke</label>
+                 </li>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Kjøttdeig">
+                     <label>Kjøttdeig</label>
+                 </li>
+                 <li class="liste">
+                     <input type="checkbox"  tname="Marinert Kyliing">
+                     <label>Marinert Kylling</label>
+                 </li>
+             </ul>
+
+         </div>
+         <div>
+             <h2 class="skapTitel">Grønnsaker</h2>
+
+             <ul>
+                 <li class="liste">
+                     <input type="checkbox"  tname="BBQ saus">
+                     <label>BBQ saus</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Ananas">
+                     <label>Ananas</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Tomat">
+                     <label>Tomat</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Løk">
+                     <label>Løk</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Mais">
+                     <label>Mais</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Tortilla Chips">
+                     <label>Tortilla Chips</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Sort Oliven">
+                     <label>Sort Oliven</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Paprika">
+                     <label>Paprika</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Jalapenos">
+                     <label>Jalapenos</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Sopp">
+                     <label>Sopp</label>
+                 </li>
+             </ul>
+
+         </div>
+         <div>
+             <h2 class="skapTitel">Spice</h2>
+
+
+             <ul>
+                 <li class="liste">
+                     <input type="checkbox"  tname="SortPepper " id="spice" onclick="checkFluency(id)" >
+                     <label> Sort Pepper</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Oregano" id="spice" onclick="checkFluency(id)">
+                     <label>Oregano</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Hvitløk/parmesan oil" id="spice" onclick="checkFluency(id)">
+                     <label>Hvitløk/parmesan oil</label>
+                 </li>
+
+                 <li class="liste">
+                     <input type="checkbox"  tname="Chilliflak" id="spice" onclick="checkFluency(id)">
+                     <label>Chilliflak</label>
+                 </li>
+
+             </ul>
+         </div>
+
+         <div>
+
+         </div>
+
+     </section>
+
+
+
+
+
+
+ </main>
+
+
+    <footer>
+        <div id="omoss2">
+            <div>
+                <img src="BILDER/dibs.png" alt="">
+            </div>
+
+            <div>
+                <h4>Miguels Posto</h4>
+                <nav>
+                    <ul>
+                        <a class="footernav" href="">Franchise</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Jobbe hos Miguels Posto</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Kontaktinfo hovedkontor</a>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h4>Hold meg oppdatert</h4>
+                <p class="footerp" >Vil du ikke gå glipp av gode tilbud eller smakfulle nyheter?. Meld deg på vårt nyhetsbrev!</p>
+
+                <form id="skjema">
+
+                    <div>
+                        <input type="email" id="inpEpost" placeholder="Epost" required>
+                    </div>
+
+                    <button type="submit" class="button"> Meld På</button>
+                </form>
+
+
+
+            </div>
+            <div>
+                <nav>
+                    <h4>
+                        Kundeservice
+                    </h4>
+                    <ul>
+                        <a class="footernav" href="">Kjøpebetingelser</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Personvern</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Ernæringstabell</a>
+                    </ul>
+                    <ul>
+                        <a class="footernav" href="">Allergentabell</a>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_sosiale_medier">
+                <h4>Sosiale Medier</h4>
+                <span>
+            <a href="">
+            <img src="BILDER/facebook_icon_round.png" class="transfromToSquareFacebook" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/icon_instagram_round.png" class="transfromToSquareInstagram" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/snapchat_icon_round.png" class="transfromToSquareSnapchat" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/twitter_icon_round.png" class="transfromToSquareTwitter" height="37" width="37">
+            </a>
+            </span>
+
+                <span>
+            <a href="">
+            <img src="BILDER/youtube_icon_round.png" class="transfromToSquareYoutube" height="37" width="37">
+            </a>
+            </span>
+
+                <div>
+                    <p id="hastagp">
+                        <br>
+                        #MiguelsPosto
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <script>
+    </script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA07RfST5XC6c-UpzDRqxwtRgMrwgXcVsg",
+            authDomain: "it01-75763.firebaseapp.com",
+            databaseURL: "https://it01-75763.firebaseio.com",
+            projectId: "it01-75763",
+            storageBucket: "it01-75763.appspot.com",
+            messagingSenderId: "217889174479"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const db = firebase.database();
+        const kontakter = db.ref("kontakter");
+        const skjema = document.getElementById("skjema");
+        //const inpNavn = document.getElementById("inpNavn");
+        const inpEpost = document.getElementById("inpEpost");
+        //const inpTelefon = document.getElementById("inpTelefon");
+        function registrerKontakt(evt) {
+            evt.preventDefault();
+            const kontakt = {
+                epost:inpEpost.value
+            };
+            kontakter.push(kontakt);
+            skjema.reset();
+        }
+        pizzaer
+            .orderByChild("pizzaer")
+            .on("child_added", visPizza);
+        const pizzabestilling = document.getElementById("pizzabestilling");
+        const bestilling = db.ref("bestilling");
+        const navn = db.ref("navn");
+        function buy(id) {
+            bestilling.push(skapdinegen);
+            alert("Lagt til i handlekurv!");
+        }
+        //pizzabestilling.onsubmit = buy(id);
+
+        function checkFluency(){
+            var checkbox = document.getElementById('spice');
+            if (checkbox.checked == true){
+                alert("+20kr");
+
+            }
+        }
+
+
+
+    </script>
+
+    <script>
+    </script>
+
+
 
 </body>
 </html>
