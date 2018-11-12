@@ -1,0 +1,58 @@
+body{
+    background-color: #201A56;
+}
+main{
+    text-align: center;
+    margin-top: 22%;
+}
+
+h1 {
+ color: #ACE13F;
+    font-size: 30px;
+}
+.spillMotB{
+    background-color: #ACE13F;
+    color: #201A56;
+    height: 60px;
+    padding: 0 14px;
+    font-size: 16px;
+    border: none;
+    width: 343px;
+
+}
+.spillMotB:hover{
+    background: #8bb72f ;
+}
+
+.flex-container{
+display: flex;
+font-size: 40px;
+}
+
+.flex-column{
+flex-direction:column;
+}
+
+.board-container {
+    height: 100%;
+    width: 100%;
+}
+.board{
+    width: 618px;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    height: 200px;
+    width: 200px;
+    border: 3px solid #ACE13F;
+}
+
+.square:hover{
+    background-color: #ACE13F;
+}
