@@ -1,5 +1,6 @@
 body{
-    background-color: #201A56;
+    background-color: #363a56;
+    font-family:"Arial Black";
 }
 main{
     text-align: center;
@@ -10,18 +11,41 @@ h1 {
  color: #ACE13F;
     font-size: 30px;
 }
-.spillMotB{
-    background-color: #ACE13F;
-    color: #201A56;
-    height: 60px;
-    padding: 0 14px;
-    font-size: 16px;
-    border: none;
-    width: 343px;
+h2{
+    color: #ACE13F;
+    text-align:center;
+}
+h3{
+    color: #ACE13F;
+    text-align: center;
+}
+
+span{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 25%;
+    margin-right: 25%;
 
 }
+#lol{
+    text-align: center;
+    margin-top: 20px;
+}
+#resetButton{
+    background-color:#ACE13F ;
+    width: 150px;
+    height: 50px;
+    border: #ACE13F;
+    margin-left: 6px;
+}
+.spillMotB{
+    background-color:#ACE13F ;
+    width: 150px;
+    height: 50px;
+    border: #ACE13F;
+}
 .spillMotB:hover{
-    background: #8bb72f ;
+    background: #363A56 ;
 }
 
 .flex-container{
@@ -38,7 +62,8 @@ flex-direction:column;
     width: 100%;
 }
 .board{
-    width: 618px;
+    width: 468px;
+    margin-top: 20px;
 }
 .flex-wrap{
     flex-wrap: wrap;
@@ -48,11 +73,14 @@ flex-direction:column;
     align-items: center;
 }
 .square{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 3px solid #ACE13F;
 }
 
 .square:hover{
     background-color: #ACE13F;
+}
+h1{
+    text-align: center;
 }

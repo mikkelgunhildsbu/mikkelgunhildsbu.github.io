@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>PC</title>
+    <title>Venn</title>
 </head>
+<link rel="stylesheet" href="3RadStylesheet.css">
 <body>
 
+<h1> Tic-Tac-Toe</h1>
+<h3 id="playerTurn"></h3>
+
+<div class="board-container flex-container flex-column flex-center">
+    <div class="board flex-container flex-wrap ">
+        <div class="square flex-container flex-center" id="box1"></div>
+        <div class="square flex-container flex-center" id="box2"></div>
+        <div class="square flex-container flex-center" id="box3"></div>
+        <div class="square flex-container flex-center" id="box4"></div>
+        <div class="square flex-container flex-center" id="box5"></div>
+        <div class="square flex-container flex-center" id="box6"></div>
+        <div class="square flex-container flex-center" id="box7"></div>
+        <div class="square flex-container flex-center" id="box8"></div>
+        <div class="square flex-container flex-center" id="box9"></div>
+    </div>
+</div>
+<h2>score</h2>
+
+<span>
+<h3 id="player1Score"></h3> <h3 id="player2Score"></h3>
+
+</span>
+<div id="lol">
+    <button id="resetButton">Reset</button>
+</div>
+
+
+<audio src="Lyd/blop.mp3" id="blopSound"></audio>
+
 </body>
+<script src ="3RamotPC.js"></script>
+
 </html>
