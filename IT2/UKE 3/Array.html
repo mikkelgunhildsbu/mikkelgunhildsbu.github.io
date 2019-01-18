@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul id="filmListe">
+    <li></li>
+</ul>
+
+</body>
+<script>
+    const filmListe = document.querySelector("#filmListe");
+
+    let filmer = ["Ben Hur", "Shawshank Redemption", "Star Wars"];
+
+    /*
+    for (let i = 0; i< filmer.length; i++){
+        document.write(filmer[i])
+    }
+*/
+    for (let film of filmer){
+        filmListe.innerHTML+=`<li> ${film} </li>`
+        /*
+    let nyttElement = document.createElement("li");
+    nyttElement.innerHTML=film;
+    filmListe.appendChild(nyttElement);
+    */
+    }
+
+    //Metoder til array
+
+    filmListe.push("Inglorius Basterds");
+    filmListe.unshift("Hawwaii Oslo"); // Legger til element foran
+    filmListe.pop(); //Fjerner siste element
+    filmListe.shift();//Fjerner første element
+
+    filmListe.splice(1,2)
+
+</script>
+</html>

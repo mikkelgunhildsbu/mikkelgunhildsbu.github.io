@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34 </title>
+
+</head>
+<style>
+
+
+
+
+</style>
+<body>
+
+<p id="filnavn"></p>
+
+<div id="SlideShow">
+
+    <button id="btnForrige" type="button" name="button"> < </button>
+    <img id="imgSlide"src="" alt="">
+    <button id="btnNeste" type="button" name="button">  > </button>
+</div>
+
+
+
+
+</body>
+<script>
+
+
+
+
+    const imgSlide = document.getElementById("imgSlide");
+    const btnForrige = document.getElementById("btnForrige");
+    const btnNeste = document.getElementById("btnNeste");
+    const filnavn = document.querySelector("#filnavn");
+    const ferieBilder =[ "kendrick.png", "pizza-in-hazel-park-michigan.jpg","ung.jpg"];
+
+    function sammenlignTekst(a,b){
+        a=a.toUpperCase();
+        b=b.toUpperCase();
+        return b<a;
+    }
+    ferieBilder.sort(sammenlignTekst);
+    filnavn.innerHTML = ferieBilder;
+
+
+    let bildeTeller = 0;
+    imgSlide.src = ferieBilder[bildeTeller];
+
+    btnNeste.onclick = nesteBilde;
+    btnForrige.onclick = forrigeBilde;
+
+    function forrigeBilde(){
+        bildeTeller = bildeTeller - 1;
+        if (bildeTeller<0){
+            bildeTeller = ferieBilder.length-1;
+        }
+        imgSlide.src = ferieBilder[bildeTeller];
+    }
+
+
+    function nesteBilde(){
+        bildeTeller = bildeTeller + 1;
+        if (bildeTeller>ferieBilder.length-1){
+            bildeTeller = 0;
+        }
+        imgSlide.src = ferieBilder[bildeTeller];
+    };
+
+
+    </script>
+</html>

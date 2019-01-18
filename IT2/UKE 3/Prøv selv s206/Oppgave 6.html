@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inp">
+<button id="settInn"></button>
+
+<p id="arrayText"></p>
+
+</body>
+<script>
+    const inp = document.querySelector("#inp");
+    const settInn = document.querySelector("#settInn");
+    const arrayText = document.querySelector("#arrayText");
+    let array = []
+
+    settInn.onclick = function(){
+        array.push(inp.value);
+
+    };
+
+arrayText.innerHTML += `${array}`
+</script>
+</html>
