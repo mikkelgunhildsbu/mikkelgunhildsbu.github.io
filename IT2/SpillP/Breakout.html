@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brick Game</title>
+
+    <style type="text/css">
+        body {
+            background-color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+        canvas {
+            border: 1px solid green;
+            background-color: antiquewhite;
+        }
+        #stilling{
+            color: deepskyblue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h2 id="stilling"> 0 </h2>
+<canvas id="game-canvas" height="600px" width="800px"> </canvas>
+
+<script type="text/javascript">
+    var canvas = document.getElementById("game-canvas");
+    // Get a 2D context for the canvas.
+    var ctx = canvas.getContext("2d");
+    const stilling = document.getElementById("stilling");
+
+
+
+    var ballR = 10;
+    var x = canvas.width / 2;
+    var y = canvas.height - 30;
+    var dx = 3;
+    var dy = -3;
+    var pongH = 15;
+    var pongW = 80;
+    var pongX = (canvas.width - pongW) / 2;
+    var rightKey = false;
+    var leftKey = false;
+    var brickRows = 3;
+    var brickCol = 9;
+    var brickW = 75;
+    var brickH = 20;
+    var brickPadding = 10;
+    var brickOffsetTop = 30;
+    var brickOffsetLeft = 30;
+    var score = 0;
+
+
+    var bricks = []; //Lager en array for brikken
+    for (c = 0; c < brickCol; c++) {
+        for (r = 0; r < brickRows; r++) {
+            bricks.push({ //Pusher brikkene inn i arrayen. Gir de posisjon og status 1 (ikke ødelagt)
+                x: (c * (brickW + brickPadding)) + brickOffsetLeft,
+                y: (r * (brickH + brickPadding)) + brickOffsetTop,
+                status: 1
+            }); //
+        }
+    }
+
+
+    // funksjon som tegner ball
+    function tegnBall() {
+        ctx.beginPath();
+        ctx.arc(x, y, ballR, 0, Math.PI * 2);
+        ctx.fillStyle = "orange";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    // funkjson som lager pong
+    function tegnPong() {
+        ctx.beginPath();
+        ctx.rect(pongX, canvas.height - pongH, pongW, pongH);
+        ctx.fillStyle = "deepskyblue";
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    // funksjon som tegner brikkene
+    function tegnBrikker() {
+        bricks.forEach(function(brick) {
+            if (!brick.status) return;
+            ctx.beginPath();
+            ctx.rect(brick.x, brick.y, brickW, brickH);
+            ctx.fillStyle = "deepskyblue";
+            ctx.fill();
+            ctx.closePath();
+        });
+    }
+//Funkson som sjekker når brikkene blir truffet
+    function collisionDetection() {
+        bricks.forEach(function(b) {
+            if (!b.status) return;
+
+            var inBricksColumn = x > b.x && x < b.x + brickW,
+                inBricksRow = y > b.y && y < b.y + brickH;
+
+            if (inBricksColumn && inBricksRow) {
+                dy = -dy; // Sprettet ballen tilbake fra brikkene når de er truffet
+                b.status = 0; //Fjerner brikkene når de blir truffet (status 0 = øderlagt)
+                score ++; // +1 på score når brikke er truffet
+                stilling.innerHTML = score;
+
+            }
+        });
+    }
+
+
+
+
+    //gameloopen
+    function gameLoop() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        tegnBrikker();
+        tegnBall();
+        tegnPong();
+        collisionDetection();
+
+        if (x + dx > canvas.width - ballR || x + dx < ballR) {
+            dx = -dx;
+        } //Spretter ballen tilbake fra veggene
+
+        if (y + dy < ballR) {
+            dy = -dy;
+        } else if (y + dy > canvas.height - ballR) {
+            if (x > pongX && x < pongX + pongW) {
+                dy = -dy;
+            } else {
+                // Hvis ballen treffer bunnen av canvasen taper man og spillet starter  på nytt
+                document.location.reload();
+
+            }
+        }
+
+        if (score === 27 ) {
+            bricks = [];
+            for (c = 0; c < brickCol; c++) {
+                for (r = 0; r < brickRows; r++) {
+                    bricks.push({
+                        x: (c * (brickW + brickPadding)) + brickOffsetLeft,
+                        y: (r * (brickH + brickPadding)) + brickOffsetTop,
+                        status: 1
+                    });
+                }
+            }
+        } //Tegner  alle brikker igjen dersom man har ødelagt alle
+
+        //Når en tast er presset
+        function keyDown(e) {
+            if (e.keyCode == 39) {
+                rightKey = true;
+            } else if (e.keyCode == 37) {
+                leftKey = true;
+            }
+        }
+
+        // Når tast ikke er presset
+        function keyUp(e) {
+            if (e.keyCode == 39) {
+                rightKey = false;
+            } else if (e.keyCode == 37) {
+                leftKey = false;
+            }
+        }
+
+        // Legger til en event listener til tastetrykkhendelsene
+        document.addEventListener("keydown", keyDown, false);
+        document.addEventListener("keyup", keyUp, false);
+
+        // flytter pong til høyere hvis høyere tast er presset
+        if (rightKey && pongX < canvas.width - pongW) {
+            pongX += 7;
+        }
+        // flytter pong til venstere hvis venstere tast er presset
+        else if (leftKey && pongX > 0) {
+            pongX -= 7;
+        }
+
+        x += dx;
+        y += dy;
+    }
+
+    setInterval(gameLoop, 10);
+</script>
+</body>
+
+</html>
